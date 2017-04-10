@@ -3,8 +3,114 @@
 
 \documentclass[modern]{aastex61}
 
-\begin{document}
+% aastex parameters
+%%\hypersetup{linkcolor=red,citecolor=green,filecolor=cyan,urlcolor=magenta}
+\received{not yet; THIS IS A DRAFT}
+%\revised{not yet}
+%\accepted{not yet}
+%\submitjournal{ApJ}
+\shorttitle{causal approach to photometry}
+\shortauthors{wang et al.}
 
-Hello World
+% typography
+\setlength{\parindent}{1.\baselineskip}
+\newcommand{\acronym}[1]{{\small{#1}}}
+\newcommand{\project}[1]{\textsl{#1}}
+\newcommand{\Kepler}{\project{Kepler}}
+\newcommand{\Ktwo}{\project{K2}}
+\newcommand{\Euclid}{\project{Euclid}}
+\newcommand{\WFIRST}{\project{\acronym{WFIRST}}}
+
+% affiliations
+\newcommand{\ccpp}{\affiliation{%
+    Center for Cosmology and Particle Physics,
+    Department of Physics,
+    New York University}}
+\newcommand{\flatiron}{\affiliation{%
+    Flatiron Institute, a division of the Simons Foundation}}
+\newcommand{\cds}{\affiliation{%
+    Center for Data Science,
+    New York University}}
+\newcommand{\mpia}{\affiliation{%
+    Max Planck Institute for Astronomie, Heidelberg}}
+\newcommand{\mpiis}{\affiliation{%
+    Max Planck Institute for Intelligent Systems, T\"ubigen}}
+
+\begin{document}\sloppy\sloppypar\raggedbottom\frenchspacing % trust me
+
+\title{A causal-independence approach to crowded-field photometry}
+
+\author{Dun Wang}
+\ccpp
+
+\author{Dan Foreman-Mackey}
+\flatiron
+
+\author[0000-0003-2866-9403]{David W. Hogg}
+\ccpp
+\flatiron
+\cds
+\mpia
+
+\author{Bernhard Sch\"olkopf}
+\mpiis
+
+\begin{abstract}\noindent % trust me
+% Context
+The \Kepler, \Ktwo, \Euclid, and \WFIRST\ Missions all produce time-domain imaging of
+crowded fields, with space-hardware optical stability and pixel-level
+astrometric registration, but imperfectly known point-spread function.
+In every pixel of such imaging, variations with time have contributions
+from spacecraft and stellar variability, the latter coming from multiple
+overlapping stars.
+% Aims
+Separation of time variability into multiple sources can be cast as a
+question in the area of causal inference.
+% Methods
+Here we apply the technique of Independent Components Analysis (\acronym{ICA})
+to perform non-parametric source separation in crowded-field imaging from
+the \Kepler\ Mission (and artificial data with similar properties).
+\acronym{ICA} capitalizes on the expectation of having greater non-Gaussianity
+in the independent sources than in their co-added combination.
+% Results
+We find that \acronym{ICA} does plausibly separate causally distinct spacecraft
+and stellar variability signals in the data sets, with spacecraft signals contributing
+to all pixels, and stellar signals contributing to small pixel subsets.
+Even though the method is given no information about the spatial proximity of pixels,
+the stellar variability components obtain spatial footprints that resemble the
+\Kepler\ pixel-convolved point-spread function.
+These results provide evidence that causal-inference approaches could have an
+impact for astronomical data analysis.
+\end{abstract}
+
+\keywords{foo --- techniques: photometric -- bar}
+
+\section{Introduction}
+
+Why do we need to do crowded-field photometry?
+
+What are the traditional approaches; they require a PSF.
+
+What can we do with Kepler-like data?
+
+The ideas behind ICA and similar methods.
+
+\section{Assumptions and method}
+
+List assumptions as an enumerate here.
+
+\section{Experiments and results}
+
+\section{Discussion}
+
+What would we need to do to operate under more relaxed assumptions; what are
+we getting wrong by making the assumptions we made?
+
+\acknowledgements
+It is a pleasure to thank\ldots
+
+Grant numbers
+
+Software and facilities.
 
 \end{document}
