@@ -35,6 +35,8 @@
     Max Planck Institute for Astronomie, Heidelberg}}
 \newcommand{\mpiis}{\affiliation{%
     Max Planck Institute for Intelligent Systems, T\"ubigen}}
+\newcommand{\uw}{\affiliation{%
+    Department of Astronomy, University of Washington}}
 
 \begin{document}\sloppy\sloppypar\raggedbottom\frenchspacing % trust me
 
@@ -45,6 +47,7 @@
 
 \author{Dan Foreman-Mackey}
 \flatiron
+\uw
 
 \author[0000-0003-2866-9403]{David W. Hogg}
 \ccpp
@@ -79,17 +82,27 @@ to all pixels, and stellar signals contributing to small pixel subsets.
 Even though the method is given no information about the spatial proximity of pixels,
 the stellar variability components obtain spatial footprints that resemble the
 \Kepler\ pixel-convolved point-spread function.
-These results provide evidence that causal-inference approaches could have an
-impact for astronomical data analysis.
+These results provide evidence that causal-inference approaches could
+have an impact for astronomical data analysis.
 \end{abstract}
 
-\keywords{foo --- techniques: photometric -- bar}
+\keywords{%
+methods: data analysis
+---
+methods: statistical
+---
+stars: variables: general
+---
+techniques: photometric
+---
+techniques: image processing}
 
 \section{Introduction}
 
 Why do we need to do crowded-field photometry?
 
-What are the traditional approaches; they require a PSF.
+What are the traditional approaches? They require a
+PSF. Non-traditional do too (cite Portillo).
 
 What can we do with Kepler-like data?
 
@@ -99,7 +112,17 @@ The ideas behind ICA and similar methods.
 
 List assumptions as an enumerate here.
 
+Explain how ICA works in detail and choices.
+
+Implementation details.
+
 \section{Experiments and results}
+
+How we made the fake data (same as CPM Image differencing).
+
+Results on fake data.
+
+Results on K2C9 data.
 
 \section{Discussion}
 
